@@ -11,6 +11,7 @@ The platform allows customers to browse products, add items to their wishlist an
 This application is designed as a multi-vendor marketplace where multiple sellers can create their own shops and sell products.
 
 ### 👤 Customers
+
 Customers can:
 
 - Create an account
@@ -42,7 +43,6 @@ Sellers can:
 - Create a seller account
 - Verify their email
 - Create and manage their shop
-- Upload shop images
 - Add products
 - Edit products
 - Delete products
@@ -53,13 +53,12 @@ Sellers can:
 - Manage orders
 - Update delivery status
 - Communicate with customers
-- Send images through chat
 - Manage shop information
 - Add bank details
 - Request withdrawals
 - View shop reviews
 - View shop products
-- View running events
+- Manage customer messages
 
 ### 👑 Administrators
 
@@ -73,10 +72,8 @@ Administrators can:
 - Manage orders
 - Manage products
 - Manage events
-- Delete users and sellers
-- Verify seller withdrawal requests
-- Manage images
-- Send email notifications
+- Manage withdrawal requests
+- Manage application data
 
 ---
 
@@ -110,7 +107,7 @@ Administrators can:
 
 - PayPal
 - Stripe
-- Cash on Delivery (COD)
+- Cash on Delivery
 
 ## Package Manager
 
@@ -129,7 +126,7 @@ Administrators can:
 - Admin authentication
 - Email verification
 - Password management
-- Profile image upload
+- Profile management
 
 ## 🏠 Home Page
 
@@ -171,7 +168,6 @@ Customers can:
 
 - Update profile information
 - Change password
-- Upload profile picture
 - View orders
 - Track orders
 - Request refunds
@@ -215,42 +211,6 @@ Administrators can manage:
 - Events
 - Withdrawal requests
 - Application statistics
-
----
-
-# 📹 Video Demo
-
-You can watch the project demonstration here:
-
-[▶️ Watch Project Demo](https://www.youtube.com/watch?v=J7PWBRnEIv8)
-
----
-
-# 📸 Screenshots
-
-## 🏠 Home Page
-
-![Home Page](https://github.com/pattjoshi/Multi_vondor_E_shop/assets/78966839/14dfa843-e495-4fd7-bffe-b10b7a65cfc9)
-
-## 👤 User Profile
-
-![User Profile](https://github.com/pattjoshi/Multi_vondor_E_shop/assets/78966839/e3fcdef1-460b-4ed6-bb51-425e6dfe3379)
-
-## 🛍️ Product Page
-
-![Product Page](https://github.com/pattjoshi/Multi_vondor_E_shop/assets/78966839/60d125e1-c4b5-4ab7-9ae5-ca922f44cd62)
-
-## 🧾 Receipt
-
-![Receipt](https://github.com/pattjoshi/Multi_vondor_E_shop/assets/78966839/370e357d-8248-46fc-8749-37aed7f5efd3)
-
-## 🏪 Seller Dashboard
-
-![Seller Dashboard](https://github.com/pattjoshi/Multi_vondor_E_shop/assets/78966839/386b48a1-9139-4b19-be0b-0b86c9cb8ccb)
-
-## 👑 Admin Dashboard
-
-![Admin Dashboard](https://github.com/pattjoshi/Multi_vondor_E_shop/assets/78966839/df7f3d6c-d429-48a0-b9bc-1673c7532faf)
 
 ---
 
@@ -303,9 +263,6 @@ Multi_vondor_E_shop/
 │   ├── index.js
 │   ├── package.json
 │   └── .env
-│
-├── .gitignore
-└── README.md
 
 ⚙️ Installation & Setup
 Step 1 — Clone the Repository
@@ -323,7 +280,7 @@ Start the frontend:
 yarn start
 Step 3 — Setup Backend
 
-Open another terminal and navigate to the server:
+Open another terminal:
 
 cd server
 
@@ -336,9 +293,7 @@ Create an uploads folder:
 server/
 └── uploads/
 
-Create a .env file inside the configuration folder.
-
-Example:
+Create a .env file and configure the required environment variables:
 
 PORT=8000
 DB_URL=""
@@ -352,7 +307,7 @@ SMPT_MAIL=""
 STRIPE_API_KEY=""
 STRIPE_SECRET_KEY=""
 
-Then start the backend:
+Start the backend:
 
 yarn start
 🔌 Step 4 — Setup Socket Server
@@ -374,9 +329,9 @@ Start the Socket.IO server:
 yarn start
 🗄️ MongoDB Configuration
 
-The project requires a MongoDB connection.
+The project requires a MongoDB database.
 
-Add your MongoDB connection string to:
+Configure your MongoDB connection inside the .env file:
 
 DB_URL=""
 
@@ -384,7 +339,7 @@ Example:
 
 DB_URL=mongodb://localhost:27017/multi_vendor_ecommerce
 
-Do not upload real database credentials, API keys, passwords, or secret keys to GitHub.
+Do not upload database credentials or secret keys to GitHub.
 
 💳 Payment Configuration
 
@@ -394,22 +349,17 @@ Stripe
 PayPal
 Cash on Delivery
 
-Configure your payment credentials in the backend .env file.
+Configure the required payment credentials in the backend .env file.
 
 📧 Email Configuration
 
-Nodemailer is used for email communication such as:
+Nodemailer is used for email communication.
 
-Email verification
-Notifications
-Seller notifications
-Order-related communication
-
-Configure your SMTP credentials in the .env file.
+Configure your SMTP credentials inside the .env file.
 
 📱 Responsive Design
 
-The application is designed to work across different screen sizes, including:
+The application is designed to work across:
 
 Desktop
 Laptop
@@ -449,8 +399,18 @@ Yarn
 If you find this project useful, consider giving the repository a ⭐.
 
 👨‍💻 Project
-
 Multi-Vendor E-Commerce Marketplace
 
-Built using the MERN stack with real-time communication, seller management, customer management, product management, order processing, and payment integration.
+A MERN stack based e-commerce platform providing:
 
+Multi-vendor shop management
+Product management
+Customer management
+Order management
+Payment integration
+Admin dashboard
+Seller dashboard
+Real-time customer-seller communication
+│
+├── .gitignore
+└── README.md
